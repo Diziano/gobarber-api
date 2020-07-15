@@ -41,15 +41,6 @@ Este é um projeto de próposito didático que está sendo desenvolvido durante 
 ## :rocket: Tecnologias
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-#### Front-end
-- [ReactJS](https://github.com/facebook/react)
-- [TypeScript](https://github.com/microsoft/TypeScript)
-- [styled-components](https://github.com/styled-components/styled-components)
-- [axios](https://github.com/axios/axios)
-- [ESLint](https://github.com/eslint/eslint)
-- [Prettier](https://github.com/prettier/prettier)
-
-#### Back-end
 - [Node.js](https://nodejs.org/en)
 - [TypeScript](https://github.com/microsoft/TypeScript)
 - [Express](https://github.com/expressjs/express)
