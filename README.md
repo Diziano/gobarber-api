@@ -33,8 +33,11 @@
 <br/>
 
 ## :computer: Projeto
-O GoBarber é um aplicativo que permite aos usuários agendar um horário com o seu barbeiro.
-Este é um projeto de próposito didático que está sendo desenvolvido durante o Bootcamp GoStack 11 da [Rocketseat](https://rocketseat.com.br/). Este repositório contempla somente a camada de Back-end da aplicação, uma API Rest. Confira a aplicação Web e Mobile nos links abaixo:
+O GoBarber é um aplicativo de agendamento para barbearias.
+Os clientes podem visualizar os horários disponíveis e agendar serviços com seu profissional favorito através do aplicativo.
+O profissional, através do site pode visualizar todos os seus próximos agendamentos e horários livres.
+
+Este é um projeto de próposito didático que foi desenvolvido durante o Bootcamp GoStack da [Rocketseat](https://rocketseat.com.br/). Este repositório contempla somente a camada de Back-end da aplicação, uma API Rest. Confira a aplicação Web e Mobile nos links abaixo:
 - [GoBarber Web](https://github.com/Diziano/gobarber-web/)
 - [GoBarber Mobile](https://github.com/Diziano/gobarber-mobile/)
 
@@ -47,6 +50,11 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [TypeScript](https://github.com/microsoft/TypeScript)
 - [Express](https://github.com/expressjs/express)
 - [TypeORM](https://github.com/typeorm/typeorm)
+- [PostgreSQL](https://github.com/postgres/postgres)
+- [Redis](https://github.com/redis/redis)
+- [MongoDB](https://github.com/mongodb/mongo)
+- [celebrate](https://github.com/arb/celebrate)
+- [Jest](https://github.com/facebook/jest)
 - [ESLint](https://github.com/eslint/eslint)
 - [Prettier](https://github.com/prettier/prettier)
 
@@ -65,12 +73,6 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 
 ## :gear: Como configurar e executar
 
-- No arquivo [ormconfig.json](ormconfig.json) configure os parâmetros de acesso ao banco de dados (username, password e database);
-
-- No arquivo [src/database/index.jsormconfig.json](src/database/index.jsormconfig.json) o nome do banco de dados dos testes (gofinances_tests);
-
-- Para alterações do banco de dados aconselha-se utilizar a CLI do TypeORM: <code>yarn typeorm {seu comando}</code>. Confira a documentação [aqui](https://typeorm.io/).
-
 ```bash
 
     # Clonar o repositório
@@ -80,8 +82,18 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
     $ cd gobarber
 
     # Instalar as dependências
-    $ yarn
+    $ yarn 
+```
 
+- Renomeie o arquivo de configuração do TypeOrm: `mv ormconfig.example.json ormconfig.json`. No mesmo arquivo configure as credenciais do PostgreSQL e MongoDB;
+
+- Renomeie o arquivo de configuração do ambiente: `mv .env.example .env`. No mesmo arquivo configure todas as variáveis de ambiente;
+
+- No arquivo [src/database/index.jsormconfig.json](src/database/index.jsormconfig.json) o nome do banco de dados dos testes (gofinances_tests);
+
+- Para alterações do banco de dados aconselha-se utilizar a CLI do TypeORM: <code>yarn typeorm {seu comando}</code>. Confira a documentação [aqui](https://typeorm.io/).
+
+```bash
     # Executar migrations para criação das tabelas nas base de dados
     $ yarn typeorm migration:run
 
